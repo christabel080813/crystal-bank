@@ -10,7 +10,7 @@ function AdminDashboard() {
             const token = localStorage.getItem("token");
 
             const response = await fetch(
-                "http://localhost:5000/api/accounts/admin/accounts",
+                `${import.meta.env.VITE_API_URL}/api/accounts/admin/accounts`,
                 {
                     headers: {
                         Authorization: `Bearer ${token}`,
@@ -43,7 +43,7 @@ function AdminDashboard() {
             const token = localStorage.getItem("token");
 
             const response = await fetch(
-                `http://localhost:5000/api/accounts/admin/accounts/${id}/${action}`,
+                `${import.meta.env.VITE_API_URL}/api/accounts/admin/accounts/${id}/${action}`,
                 {
                     method: "PATCH",
                     headers: {

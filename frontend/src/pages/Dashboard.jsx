@@ -44,7 +44,7 @@ function Dashboard() {
                 const token = localStorage.getItem("token");
 
                 const response = await fetch(
-                    "http://localhost:5000/api/accounts/me",
+                    `${import.meta.env.VITE_API_URL}/api/accounts/me`,
                     {
                         headers: {
                             Authorization: `Bearer ${token}`,
@@ -78,7 +78,7 @@ function Dashboard() {
             const token = localStorage.getItem("token");
 
             const response = await fetch(
-                "http://localhost:5000/api/transactions",
+                `${import.meta.env.VITE_API_URL}/api/transactions`,
                 {
                     headers: {
                         Authorization: `Bearer ${token}`,
@@ -123,7 +123,7 @@ function Dashboard() {
             const token = localStorage.getItem("token");
 
             const response = await fetch(
-                "http://localhost:5000/api/transactions/deposit",
+                `${import.meta.env.VITE_API_URL}/api/transactions/deposit`,
                 {
                     method: "POST",
                     headers: {
@@ -182,7 +182,7 @@ function Dashboard() {
             const token = localStorage.getItem("token");
 
             const response = await fetch(
-                "http://localhost:5000/api/transactions/withdraw",
+                `${import.meta.env.VITE_API_URL}/api/transactions/withdraw`,
                 {
                     method: "POST",
                     headers: {
@@ -241,7 +241,7 @@ function Dashboard() {
             const token = localStorage.getItem("token");
 
             const response = await fetch(
-                "http://localhost:5000/api/transactions/transfer",
+                `${import.meta.env.VITE_API_URL}/api/transactions/transfer`,
                 {
                     method: "POST",
                     headers: {
